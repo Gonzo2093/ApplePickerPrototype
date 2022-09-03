@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 559120576}
   - component: {fileID: 559120575}
   - component: {fileID: 559120574}
+  - component: {fileID: 559120577}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -207,6 +208,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &559120577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559120573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4cd93b056bad9147bc7b86e3e630cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basketPrefab: {fileID: 5639282903440091996, guid: 775e6e9e304617e468a715030c87e0f3, type: 3}
+  numBaskets: 3
+  basketBottomY: -14
+  basketSpacingY: 2
 --- !u!1 &1660398294
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,6 +325,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 545232636625571989, guid: 6c5f230ac6c52f142bd64c5b7c20b1c8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 545232636966426796, guid: 6c5f230ac6c52f142bd64c5b7c20b1c8, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -352,9 +373,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 545232636966426797, guid: 6c5f230ac6c52f142bd64c5b7c20b1c8, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 545232636966426799, guid: 6c5f230ac6c52f142bd64c5b7c20b1c8, type: 3}
       propertyPath: m_Name
       value: AppleTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 545232636966426799, guid: 6c5f230ac6c52f142bd64c5b7c20b1c8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 545232637774565862, guid: 6c5f230ac6c52f142bd64c5b7c20b1c8, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 545232637774565863, guid: 6c5f230ac6c52f142bd64c5b7c20b1c8, type: 3}
       propertyPath: m_LocalScale.z
