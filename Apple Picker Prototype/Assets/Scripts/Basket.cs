@@ -49,5 +49,9 @@ public class Basket : MonoBehaviour
 
         // Преобразовать число очков обратно в строку и вывести на экран
         scoreGT.text = score.ToString();
+
+        // Запомнить высшее достижение
+        if (score > HighScore.score)
+            HighScore.score = score;
     }
 }

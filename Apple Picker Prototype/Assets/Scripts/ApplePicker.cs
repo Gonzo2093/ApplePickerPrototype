@@ -40,5 +40,9 @@ public class ApplePicker : MonoBehaviour
         // Исключить корзину из списка и удалить сам игровой объект
         basketList.RemoveAt(basketIndex);
         Destroy(tBasketGO);
+
+        // Если корзин не осталось, перезапустить игру
+        if (basketList.Count == 0)
+            SceneManager.LoadScene("_Scene_0");
     }
 }
