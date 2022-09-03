@@ -19,10 +19,13 @@ public class ApplePicker : MonoBehaviour
             tBasketGO.transform.position = pos;
         }
     }
-
-    // Update is called once per frame
-    void Update()
+    public void AppleDestroyed()
     {
-        
+        // ”далить все упавшие €блоки
+        GameObject[] tAppleArray = GameObject.FindGameObjectsWithTag("Apple");
+        foreach (GameObject tGO in tAppleArray)
+        {
+            Destroy(tGO);
+        }
     }
 }
