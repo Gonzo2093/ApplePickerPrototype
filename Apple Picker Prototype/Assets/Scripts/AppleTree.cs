@@ -9,20 +9,35 @@ public class AppleTree : MonoBehaviour
     public GameObject applePrefab;
 
     // —корость движени€ €блони
-    public float speed = 1f;
+    private float speed = 10f;
 
     // –ассто€ние, на котором должно измен€тьс€ направление движени€ €блони
-    public float leftAndRightEdge = 10f;
+    private float leftAndRightEdge = 20f;
 
     // ¬еро€тность случайного изменени€ направлени€ движени€
-    public float chanceToChangeDirections = 0.1f;
+    private float chanceToChangeDirections = 0.01f;
 
     // „астота создани€ экземпл€ров €блок
-    public float secondsBetweenAppleDrops = 1f;
+    private float secondsBetweenAppleDrops = 1f;
     void Start()
     {
         // —брасывать €блоки раз в секунду
         Invoke(nameof(DropApple), 2f);
+        Invoke(nameof(BoostSpeed), 5f);
+    }
+
+    void BoostSpeed()
+    {
+        if (speed > 0)
+            speed += 5;
+        else
+            speed -= 5;
+
+        if (secondsBetweenAppleDrops > 0.2f)
+        {
+            secondsBetweenAppleDrops -= 0.05f;
+        }
+        Invoke(nameof(BoostSpeed), 5f);
     }
 
     void DropApple()

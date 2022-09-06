@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class StartWindow : MonoBehaviour
 {
-    public void Play(int index)
+    public void Play()
     {
-        SceneManager.LoadScene(index);
+        SceneManager.LoadScene("_Scene_0");
     }
 
     public void Exit()

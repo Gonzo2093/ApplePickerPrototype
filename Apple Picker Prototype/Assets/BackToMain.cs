@@ -8,7 +8,7 @@ public class BackToMain : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("_Scene_1_StartWindow");
         }
     }
 }

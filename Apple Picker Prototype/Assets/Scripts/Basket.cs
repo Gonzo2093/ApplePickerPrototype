@@ -19,6 +19,18 @@ public class Basket : MonoBehaviour
     }
     void Update()
     {
+        if(Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            Vector3 pos2 = transform.position;
+            pos2.x += -10 * Time.deltaTime;
+            transform.position = pos2;
+        }
+        if(Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            Vector3 pos2 = transform.position;
+            pos2.x += 10 * Time.deltaTime;
+            transform.position = pos2;
+        }
         // Получить текущие координаты указателя мыши на экране из Input
         Vector3 mousePos2D = Input.mousePosition;
 

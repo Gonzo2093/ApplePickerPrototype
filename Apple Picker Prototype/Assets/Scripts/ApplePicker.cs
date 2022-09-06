@@ -43,6 +43,6 @@ public class ApplePicker : MonoBehaviour
 
         // Если корзин не осталось, перезапустить игру
         if (basketList.Count == 0)
-            SceneManager.LoadScene("_Scene_0");
+            SceneManager.LoadScene("_Scene_2_GameOver");
     }
 }
